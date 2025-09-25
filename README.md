@@ -3,28 +3,29 @@
 
 ### 🎯 Objective  
 The objective of this task is to *implement and understand simple & multiple linear regression* using Scikit-learn, Pandas, and Matplotlib.  
-We explore the dataset, train regression models, evaluate their performance, and interpret the results.  
+We explore a dataset, train regression models, evaluate their performance, and interpret the results.  
 
 ---
 
 ### 📂 Dataset  
-- *Name:* Housing Price Prediction Dataset  
-- *Source:* [Kaggle – Housing Price Prediction](https://www.kaggle.com/datasets/harishkumardatalab/housing-price-prediction)  
-- *Description:* Contains housing features (area, number of rooms, etc.) and corresponding prices.  
+- *Source:* Dataset loaded directly in *Google Colab* (publicly available dataset, not the Kaggle housing dataset).  
+- *Description:* The dataset contains input features (independent variables) and a target variable, which we aim to predict using linear regression.  
+
+(📌 Replace this description with your dataset name and a 1–2 line explanation about its columns, e.g., "This dataset contains attributes like area, bedrooms, etc. and the target variable is house price.")  
 
 ---
 
 ### ⚙ Steps Followed  
 1. *Import Libraries* → pandas, numpy, matplotlib, seaborn, scikit-learn.  
-2. *Load Dataset* → Read CSV file into a DataFrame.  
+2. *Load Dataset* → Loaded from Google Colab environment.  
 3. *Preprocess Data*  
    - Checked for missing values.  
-   - Handled categorical features (if any).  
+   - Cleaned and prepared data.  
    - Selected relevant features.  
 4. *Train-Test Split* → Divided dataset into 80% training and 20% testing.  
 5. *Model Building*  
-   - Implemented *Simple Linear Regression* (price vs. one feature).  
-   - Implemented *Multiple Linear Regression* (price vs. multiple features).  
+   - Implemented *Simple Linear Regression* (target vs. one feature).  
+   - Implemented *Multiple Linear Regression* (target vs. multiple features).  
 6. *Evaluation Metrics*  
    - Mean Absolute Error (MAE)  
    - Mean Squared Error (MSE)  
@@ -41,25 +42,25 @@ We explore the dataset, train regression models, evaluate their performance, and
 - *Mean Squared Error (MSE):* X.XX  
 - *R² Score:* X.XX  
 
-(Replace with your actual values from notebook)  
+(Replace with your actual values from Colab notebook)  
 
 ✅ The model shows a reasonable fit with positive R² score.  
-✅ Coefficients indicate how each feature influences the target (house price).  
+✅ Coefficients indicate how each feature influences the target variable.  
 
 ---
 
 ### 📈 Plots  
 - Scatter plot with regression line (Simple Regression).  
-- Predicted vs. Actual house prices.  
+- Predicted vs. Actual values comparison.  
 
-(You can insert screenshots from your notebook here if needed)  
+(Add screenshots from Colab here if needed)  
 
 ---
 
 ### 🧾 Interpretation of Coefficients  
-- *Intercept (β₀):* Baseline value of price when all features are 0.  
+- *Intercept (β₀):* Baseline value of the target variable when all features are 0.  
 - *Coefficients (βᵢ):* Change in target variable for each unit increase in the respective feature.  
-  - Example: If coefficient of Area = 150, then for every additional 1 sq. ft., price increases by 150 (keeping other factors constant).  
+  - Example: If coefficient of X1 = 5, then for every additional unit in X1, the target increases by 5 (keeping other factors constant).  
 
 ---
 
