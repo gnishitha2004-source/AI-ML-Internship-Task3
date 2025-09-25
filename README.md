@@ -2,99 +2,93 @@
 ## 📌 Linear Regression Implementation  
 
 ### 🎯 Objective  
-The goal of this task is to *implement and understand simple & multiple linear regression* using Python (Scikit-learn, Pandas, Matplotlib).  
-The focus is on dataset handling, model training, evaluation, interpretation of results, and answering core theoretical questions.  
+The objective of this task is to *implement and understand simple & multiple linear regression* using Python libraries such as Scikit-learn, Pandas, and Matplotlib.  
+The task focuses on training a regression model, evaluating its performance, visualizing results, and understanding theoretical concepts.  
 
 ---
 
 ### 📂 Dataset  
 - *Source:* Loaded directly in *Google Colab* (not Kaggle).  
 - *Environment:* Google Colab + GitHub repository.  
-- *Description:* Dataset consists of input features (independent variables) and a target variable that we predict using regression.  
-
-(👉 Since task rules allow “any dataset,” Colab dataset usage is acceptable.)  
+- *Description:* The dataset includes independent features (X) and a dependent target variable (y) to demonstrate regression analysis.  
 
 ---
 
 ### ⚙ Steps Followed  
-1. *Imported libraries* → pandas, numpy, matplotlib, seaborn, scikit-learn.  
-2. *Loaded dataset* into a Pandas DataFrame in Colab.  
-3. *Explored & Preprocessed*  
-   - Checked shape, info, and missing values.  
-   - Cleaned/prepared data.  
-   - Selected features (X) and target (y).  
-4. *Split Dataset*  
-   - Train (80%) and Test (20%) using train_test_split.  
-5. *Model Building*  
-   - Applied *Simple Linear Regression* (1 feature vs target).  
-   - Applied *Multiple Linear Regression* (multiple features vs target).  
-6. *Evaluation*  
-   - Mean Absolute Error (MAE).  
-   - Mean Squared Error (MSE).  
-   - R² Score.  
+1. *Imported Libraries* → pandas, numpy, matplotlib, seaborn, scikit-learn.  
+2. *Loaded Dataset* into a Pandas DataFrame.  
+3. *Explored & Preprocessed Data*  
+   - Checked dataset shape and info.  
+   - Handled missing values if any.  
+   - Selected independent variables (X) and target variable (y).  
+4. *Train-Test Split*  
+   - Split dataset into 80% training and 20% testing.  
+5. *Model Training*  
+   - Implemented *Simple Linear Regression* (1 feature vs. target).  
+   - Implemented *Multiple Linear Regression* (multiple features vs. target).  
+6. *Evaluation Metrics*  
+   - Mean Absolute Error (MAE)  
+   - Mean Squared Error (MSE)  
+   - R² Score  
 7. *Visualization*  
-   - Regression line (simple regression).  
-   - Actual vs Predicted scatter plot.  
+   - Scatter plot with regression line.  
+   - Predicted vs. Actual comparison plot.  
 
 ---
 
-### 📊 Results (Example)  
+### 📊 Results  
 
 - *Mean Absolute Error (MAE):* X.XX  
 - *Mean Squared Error (MSE):* X.XX  
 - *R² Score:* X.XX  
 
-(👉 Replace with the actual values from your notebook output.)  
-
-✅ The regression model worked as expected with a positive R² score.  
-✅ Coefficients clearly show how each feature influences the target.  
+👉 *(Replace X.XX with the actual values from your notebook before final submission.)*  
 
 ---
 
 ### 📈 Interpretation of Coefficients  
-- *Intercept (β₀):* Baseline prediction when all features = 0.  
-- *Coefficient (βᵢ):* Amount the target changes for each 1-unit increase in a feature, keeping other features constant.  
-  - Example: If β(area) = 120, each extra unit of “area” increases price by 120 units.  
+- *Intercept (β₀):* Baseline value of the target variable when all features = 0.  
+- *Coefficient (βᵢ):* Expected change in the target variable for each 1-unit increase in the corresponding feature, keeping other features constant.  
 
 ---
 
 ### 📉 Visualizations  
-- Regression line plotted on scatter data (Simple Regression).  
-- Predicted vs. Actual values plot to show performance.  
-
-(👉 You can add screenshots from your notebook here if you want to make README more visual.)  
+- Regression line plotted for simple regression.  
+- Scatter plot of predicted vs. actual values to check accuracy.  
 
 ---
 
 ### ❓ Interview Questions & Answers  
 
 1. *What assumptions does linear regression make?*  
-   - Linearity, no multicollinearity, independence of errors, homoscedasticity, normality of errors.  
+   - Linearity, no multicollinearity, independence of errors, homoscedasticity, normally distributed residuals.  
 
 2. *How do you interpret the coefficients?*  
-   - Each coefficient = expected change in target per 1-unit increase in that feature, holding others constant.  
+   - Each coefficient = change in target for a unit increase in that feature, keeping others constant.  
 
 3. *What is R² score and its significance?*  
    - R² = proportion of variance in target explained by the model.  
-   - Higher R² → better fit.  
+   - Higher R² → better model fit.  
 
 4. *When would you prefer MSE over MAE?*  
-   - MSE penalizes larger errors more → better when big errors must be avoided.  
-   - MAE is more robust to outliers.  
+   - *MSE* penalizes larger errors more → better when large mistakes must be avoided.  
+   - *MAE* is better when robustness to outliers is needed.  
 
 5. *How do you detect multicollinearity?*  
    - Correlation matrix or Variance Inflation Factor (VIF).  
    - VIF > 10 → problematic multicollinearity.  
 
 6. *What is the difference between simple and multiple regression?*  
-   - Simple = one independent variable.  
-   - Multiple = two or more independent variables.  
+   - Simple regression = one independent variable.  
+   - Multiple regression = two or more independent variables.  
 
 7. *Can linear regression be used for classification?*  
-   - Not directly. For classification, logistic regression or other classifiers should be used.  
+   - Not directly. For classification, we use logistic regression or classification algorithms.  
 
 8. *What happens if you violate regression assumptions?*  
-   - Coefficients may be biased, predictions unreliable, model fit weakens.  
+   - Coefficients may be biased.  
+   - Predictions become unreliable.  
+   - Model accuracy decreases.  
 
 ---
 
@@ -109,10 +103,10 @@ The focus is on dataset handling, model training, evaluation, interpretation of 
 ---
 
 ### ✅ Conclusion  
-- Implemented *simple & multiple linear regression* successfully.  
-- Evaluated the model using *MAE, MSE, and R²*.  
-- Learned how to interpret regression coefficients.  
-- Answered theoretical questions to strengthen conceptual understanding.  
+- Implemented both *Simple & Multiple Linear Regression*.  
+- Evaluated the model using *MAE, MSE, and R² score*.  
+- Interpreted regression coefficients and model results.  
+- Answered important theoretical interview questions.  
 
 ---
 
@@ -120,4 +114,4 @@ The focus is on dataset handling, model training, evaluation, interpretation of 
 - *GitHub Repository Link:* [AI-ML-Internship-Task3](https://github.com/gnishitha2004-source/AI-ML-Internship-Task3)  
 - *Environment:* Google Colab + GitHub  
 
-✅ Task 3 completed as per internship guidelines.
+✅ Task 3 completed and ready for submission.
