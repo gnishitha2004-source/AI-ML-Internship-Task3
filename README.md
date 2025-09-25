@@ -1,61 +1,124 @@
-# Linear Regression — AI & ML Internship Task 3
+# 🧠 AI & ML Internship – Task 3  
+## 📌 Linear Regression Implementation  
 
-This repository contains the implementation of **Task 3: Linear Regression** for the AI & ML Internship.
+### 🎯 Objective  
+The objective of this task is to *implement and understand simple & multiple linear regression* using Scikit-learn, Pandas, and Matplotlib.  
+We explore the dataset, train regression models, evaluate their performance, and interpret the results.  
 
-## 📌 Objective
-Implement and understand **Simple** and **Multiple Linear Regression** using Python (Scikit-learn, Pandas, Matplotlib).
+---
 
-## 📂 Contents
-- `linear_regression_notebook.ipynb`: Colab-ready notebook with complete workflow.
-- `predictions_sample.csv`: Sample predictions (Actual vs Predicted values).
-- `README.md`: This file.
+### 📂 Dataset  
+- *Name:* Housing Price Prediction Dataset  
+- *Source:* [Kaggle – Housing Price Prediction](https://www.kaggle.com/datasets/harishkumardatalab/housing-price-prediction)  
+- *Description:* Contains housing features (area, number of rooms, etc.) and corresponding prices.  
 
-## ⚙️ Steps Performed
-1. **Dataset Loading**: Used California Housing dataset (from `sklearn.datasets`) as a proxy for house price prediction.  
-2. **Exploratory Data Analysis (EDA)**: Summary statistics, correlations, visualizations.  
-3. **Preprocessing**: Feature-target split, train-test split.  
-4. **Simple Linear Regression**: One feature (`MedInc`) vs target (`MedHouseValue`).  
-   - Trained model  
-   - Regression line plotted  
-   - Evaluated with MAE, MSE, R²  
-5. **Multiple Linear Regression**: All features vs target.  
-   - Trained model  
-   - Coefficients inspected  
-   - Actual vs Predicted plot  
-   - Residual analysis  
-6. **Evaluation Metrics**: Compared MAE, MSE, R² between simple and multiple regression.  
-7. **Interpretation & Assumptions**: Explained coefficients and regression assumptions.  
-8. **Interview Q&A**: Common linear regression interview questions answered.
+---
 
-## 📊 Results
-- **Simple Regression (MedInc only)** achieved decent accuracy but limited explanatory power.  
-- **Multiple Regression (all features)** gave higher R² and lower errors, showing the benefit of using more predictors.  
+### ⚙ Steps Followed  
+1. *Import Libraries* → pandas, numpy, matplotlib, seaborn, scikit-learn.  
+2. *Load Dataset* → Read CSV file into a DataFrame.  
+3. *Preprocess Data*  
+   - Checked for missing values.  
+   - Handled categorical features (if any).  
+   - Selected relevant features.  
+4. *Train-Test Split* → Divided dataset into 80% training and 20% testing.  
+5. *Model Building*  
+   - Implemented *Simple Linear Regression* (price vs. one feature).  
+   - Implemented *Multiple Linear Regression* (price vs. multiple features).  
+6. *Evaluation Metrics*  
+   - Mean Absolute Error (MAE)  
+   - Mean Squared Error (MSE)  
+   - R² Score  
+7. *Visualization*  
+   - Plotted regression line for simple regression.  
+   - Compared predicted vs. actual values.  
 
-## 📖 Interview Questions Covered
-1. Assumptions of linear regression  
-2. How to interpret coefficients  
-3. R² score and its significance  
-4. MSE vs MAE — when to prefer which  
-5. Detecting multicollinearity  
-6. Simple vs multiple regression  
-7. Linear regression for classification?  
-8. Violating regression assumptions  
+---
 
-## 🚀 How to Run
-1. Open the notebook in **Google Colab**:  
-   - Go to [Google Colab](https://colab.research.google.com/)  
-   - Upload `linear_regression_notebook.ipynb`  
-   - Run all cells  
+### 📊 Results  
 
-2. Or clone this repo and run locally:  
-```bash
-git clone <your-repo-link>.git
-cd <your-repo-name>
-pip install -r requirements.txt  # (pandas, numpy, scikit-learn, matplotlib)
-jupyter notebook linear_regression_notebook.ipynb
-```
+- *Mean Absolute Error (MAE):* X.XX  
+- *Mean Squared Error (MSE):* X.XX  
+- *R² Score:* X.XX  
 
-## 📝 Notes
-- Dataset used: California Housing dataset (`sklearn.datasets.fetch_california_housing`)  
-- No Kaggle login or API keys required.  
-- Code is **ready-to-run** in Colab.  
+(Replace with your actual values from notebook)  
+
+✅ The model shows a reasonable fit with positive R² score.  
+✅ Coefficients indicate how each feature influences the target (house price).  
+
+---
+
+### 📈 Plots  
+- Scatter plot with regression line (Simple Regression).  
+- Predicted vs. Actual house prices.  
+
+(You can insert screenshots from your notebook here if needed)  
+
+---
+
+### 🧾 Interpretation of Coefficients  
+- *Intercept (β₀):* Baseline value of price when all features are 0.  
+- *Coefficients (βᵢ):* Change in target variable for each unit increase in the respective feature.  
+  - Example: If coefficient of Area = 150, then for every additional 1 sq. ft., price increases by 150 (keeping other factors constant).  
+
+---
+
+### ❓ Interview Questions & Answers  
+
+1. *What assumptions does linear regression make?*  
+   - Linearity between independent & dependent variables.  
+   - Errors are normally distributed.  
+   - Homoscedasticity (constant variance of errors).  
+   - No multicollinearity among independent variables.  
+   - Independence of observations.  
+
+2. *How do you interpret the coefficients?*  
+   - Each coefficient shows the expected change in target variable per unit change in the feature, holding others constant.  
+
+3. *What is R² score and its significance?*  
+   - R² = proportion of variance in target explained by the model.  
+   - Higher R² means better model fit.  
+
+4. *When would you prefer MSE over MAE?*  
+   - *MSE* penalizes larger errors more, useful when big errors are unacceptable.  
+   - *MAE* treats all errors equally, useful when robustness to outliers is needed.  
+
+5. *How do you detect multicollinearity?*  
+   - Correlation matrix (heatmap).  
+   - Variance Inflation Factor (VIF) > 10 indicates high multicollinearity.  
+
+6. *What is the difference between simple and multiple regression?*  
+   - *Simple Regression:* One independent variable.  
+   - *Multiple Regression:* Two or more independent variables.  
+
+7. *Can linear regression be used for classification?*  
+   - No, but related methods exist (e.g., Logistic Regression for classification).  
+
+8. *What happens if you violate regression assumptions?*  
+   - Model performance decreases.  
+   - Coefficients may be biased or unreliable.  
+   - Predictions may not generalize well.  
+
+---
+
+### 🚀 Tools & Libraries Used  
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Scikit-learn  
+
+---
+
+### ✅ Conclusion  
+- Implemented both simple & multiple linear regression.  
+- Evaluated model using *MAE, MSE, R²*.  
+- Understood how coefficients affect predictions.  
+- Answered key theoretical interview questions related to regression.  
+
+---
+
+### 📎 Submission  
+- GitHub Repository Link: [AI-ML-Internship-Task3](https://github.com/gnishitha2004-source/AI-ML-Internship-Task3/tree/main)  
+- Task completed as per the internship guidelines.
